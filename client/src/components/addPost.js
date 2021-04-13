@@ -25,7 +25,7 @@ function AddPost(){
     }
 
     return(
-        <div className='row justify-content-center'>
+        <div className='addpost'>
 
             <div className='col-md-6'>
                 <div>

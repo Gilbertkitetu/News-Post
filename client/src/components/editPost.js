@@ -52,7 +52,7 @@ function EditPost(){
 
     return(
 
-            <div className='col-md-6'>
+            <div className='editpost'>
                 <h1>Edit the post </h1>
                 <div>
                     <input type="text" placeholder='title' className='form-control'
