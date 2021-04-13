@@ -20,7 +20,7 @@ function App() {
 
                 <Route path='/' component={PostList} exact/>
                 <Route path='/addpost' component={AddPost} exact/>
-                <Route path='/editpost' component={EditPost}/>
+                <Route path='/editpost/:postid' component={EditPost}/>
 
             </BrowserRouter>
            {/* <PostList />*/}

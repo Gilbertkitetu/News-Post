@@ -29,6 +29,7 @@ function AddPost(){
 
             <div className='col-md-6'>
                 <div>
+                    <a href="/">See Posts</a>
                     <input type="text" placeholder='title' className='form-control'
                     value={title} onChange={(e) => {settitle(e.target.value)}}
                     />

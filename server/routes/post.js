@@ -31,7 +31,51 @@ router.post('/addnewpost', (req, res)=>{
             res.send(err)
         }
     })
+});
+
+router.get('/getposts', (req, res) => {
+    postModel.find({}, function(docs , err){
+        if(!err){
+            res.send(docs)
+        }
+        else{
+            res.send(err)
+        }
+    })
 })
 
+router.post('/getpostdata', (req, res)=>{
+    postModel.find({postid: req.body.postid}, (docs, err)=>{
+        if(!err) {
+            res.send(docs)
+        }else{
+            res.send(err)
+        }
+    })
+})
+
+router.post('/updatepost' , (req , res)=>{
+    postModel.findOneAndUpdate({postid: req.body.postid},{
+        title: req.body.title,
+        imageurl: req.body.imageurl,
+        description : req.body.description
+    },(err)=>{
+        if(!err){
+            res.send('Post updated successfully');
+        }else {
+            res.send(err)
+        }
+    })
+})
+
+router.post('/deletepost' , (req, res)=>{
+    postModel.findOneAndDelete({postid: req.body.postid} , (err)=>{
+        if(!err){
+            res.send('Post deleted successfully')
+        }else{
+            res.send(err)
+        }
+    })
+})
 
 module.exports = router
