@@ -97,3 +97,13 @@ a{
     height: auto;
     width: auto;
 }
+.add-post{
+    padding: 30px;
+    margin-top: 80px;
+    height: 80px;
+    width: 100px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}

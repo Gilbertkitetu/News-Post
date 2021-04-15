@@ -3,7 +3,7 @@ import uniqid from 'uniqid';
 import axios from 'axios'
 
 function AddPost(){
-
+//hooks
     const[title , settitle] = useState('');
     const[imageurl , setimageurl] = useState('');
     const[description , setdescription] = useState('');

@@ -28,7 +28,7 @@ function PostList(){
     
     return(
         <div>
-            <a href="/addpost">Add Post</a>
+            <a href="/addpost" className="add-post">Add Post</a>
             {postlist}
         </div>
     );
